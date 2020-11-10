@@ -104,9 +104,19 @@ def mongo():
 
     return 'scraped and inserted'
 
+
+
 @app.route('/')
 def home():
-    
+
+    conn = 'mongodb://localhost:27017'
+    client = pymongo.MongoClient(conn)
+    db = client.mars_db
+    img = db.featured.find()
+
+
+
+    return render_template('index.html', img = img)
 
 
 
