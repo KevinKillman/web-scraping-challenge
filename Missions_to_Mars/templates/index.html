@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">>
+    <title>Mission To Mars!</title>
+</head>
+<body>
+    <div class='container' >
+        <div class='row' style='background: lightgray;'>
+            <div class='col-md-4'></div>
+            <div class='col-md-4'>
+                <h1>Mission to Mars</h1>
+                <a type='button' class='btn btn-outline-primary' href='http://127.0.0.1:5000/scrape'>Scrape New Data</a>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-12'>
+                <h2>Latest Mars News</h2>
+                <h3> {{title}}</h3>
+                <p> {{description}}</p>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-8'>
+                <h2>Featured Mars Image</h2>
+                <img  src={{url}} class='img-fluid'>
+            </div>
+            <div class='col-md-4'>
+                <h3>Mars Vs. Earth</h3>
+                <table class="dataframe">
+                    <thead>
+                      <tr style="text-align: right;">
+
+                        <th></th>
+                        <th>Mars</th>
+                        <th>Earth</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+
+                        <td>Diameter:</td>
+                        <td>6,779 km</td>
+                        <td>12,742 km</td>
+                      </tr>
+                      <tr>
+
+                        <td>Mass:</td>
+                        <td>6.39 × 10^23 kg</td>
+                        <td>5.97 × 10^24 kg</td>
+                      </tr>
+                      <tr>
+
+                        <td>Moons:</td>
+                        <td>2</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+
+                        <td>Distance from Sun:</td>
+                        <td>227,943,824 km</td>
+                        <td>149,598,262 km</td>
+                      </tr>
+                      <tr>
+
+                        <td>Length of Year:</td>
+                        <td>687 Earth days</td>
+                        <td>365.24 days</td>
+                      </tr>
+                      <tr>
+
+                        <td>Temperature:</td>
+                        <td>-87 to -5 °C</td>
+                        <td>-88 to 58°C</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

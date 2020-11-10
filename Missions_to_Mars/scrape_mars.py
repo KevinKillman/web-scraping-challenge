@@ -112,11 +112,17 @@ def home():
     conn = 'mongodb://localhost:27017'
     client = pymongo.MongoClient(conn)
     db = client.mars_db
-    img = db.featured.find()
+    for x in db.featured.find():
+        url = x['featured_image_url']
+    news = db.news.find_one()
+    title = news['title']
+    description = news['description']
+    html = db.html.find_one()
+    table = html['html_table_string'][0].replace('\n','')
 
 
 
-    return render_template('index.html', img = img)
+    return render_template("index.html", url=url, title=title, description=description, table=table)
 
 
 
